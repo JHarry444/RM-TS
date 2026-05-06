@@ -1,4 +1,4 @@
-abstract class Animal {
+export abstract class Animal {
     // readonly properties can only be set during initialization or in the constructor
 
 
@@ -38,7 +38,7 @@ abstract class Animal {
 // console.log(myAnimal2.speak());
 
 
-class Dog extends Animal {
+export class Dog extends Animal {
     private breed: string;
     constructor(name: string, age: number, breed: string, colour?: string) {
         super(name, age, colour);
@@ -66,7 +66,7 @@ interface Flyable {
     fly(): string;
 }
 
-class Bird extends Animal implements Flyable {
+export class Bird extends Animal implements Flyable {
     constructor(name: string, age: number, colour?: string) {
         super(name, age, colour);
     }
